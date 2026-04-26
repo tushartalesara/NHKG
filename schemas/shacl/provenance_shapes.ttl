@@ -1,0 +1,22 @@
+﻿@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix nif: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+@prefix nhkg: <http://ns.nhkg.org/resource/> .
+
+nhkg:DerivedNodeShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf prov:wasDerivedFrom ;
+    sh:property [
+        sh:path prov:wasDerivedFrom ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+    ] .
+
+nhkg:ReferenceContextShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf nif:referenceContext ;
+    sh:property [
+        sh:path nif:referenceContext ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+    ] .

@@ -1,0 +1,15 @@
+predicates:
+  - http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+  - http://www.w3.org/2000/01/rdf-schema#label
+  - http://dbpedia.org/ontology/abstract
+  - http://dbpedia.org/ontology/birthDate
+  - http://dbpedia.org/ontology/deathDate
+  - http://dbpedia.org/ontology/foundingDate
+  - http://dbpedia.org/ontology/country
+  - http://dbpedia.org/ontology/location
+  - http://dbpedia.org/ontology/parentOrganisation
+  - http://dbpedia.org/ontology/occupation
+  - http://dbpedia.org/ontology/capital
+  - http://dbpedia.org/ontology/leader
+  - http://www.w3.org/2003/01/geo/wgs84_pos#lat
+  - http://www.w3.org/2003/01/geo/wgs84_pos#long

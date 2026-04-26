@@ -1,0 +1,30 @@
+﻿plausible_trigger_upos:
+  - VERB
+  - ADJ
+  - NOUN
+  - PROPN
+locative_roles:
+  - destination
+  - location
+  - source
+  - origin
+  - place
+  - venue
+source_roles:
+  - source
+  - origin
+destination_roles:
+  - destination
+manual_review_threshold: 0.65
+hard_review_threshold: 0.45
+role_type_hints:
+  agent: PER
+  actor: PER
+  experiencer: PER
+  speaker: PER
+  leader: PER
+  destination: LOC
+  location: LOC
+  source: LOC
+  origin: LOC
+  place: LOC

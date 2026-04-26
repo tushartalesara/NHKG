@@ -1,0 +1,17 @@
+PER:
+  - http://dbpedia.org/ontology/Person
+  - http://dbpedia.org/ontology/Agent
+LOC:
+  - http://dbpedia.org/ontology/Place
+  - http://dbpedia.org/ontology/Location
+  - http://dbpedia.org/ontology/PopulatedPlace
+  - http://dbpedia.org/ontology/Country
+ORG:
+  - http://dbpedia.org/ontology/Organisation
+  - http://dbpedia.org/ontology/Company
+  - http://dbpedia.org/ontology/GovernmentAgency
+  - http://dbpedia.org/ontology/EducationalInstitution
+TIME: []
+NUM: []
+MISC: []
+

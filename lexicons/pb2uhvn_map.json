@@ -1,0 +1,52 @@
+{
+  "mar.01": {
+    "lemma": "mar",
+    "uhvn_class": "MARAA-1.0",
+    "mapping": {
+      "Arg0": "Agent",
+      "Arg1": "Patient",
+      "Arg2": "Instrument"
+    }
+  },
+  "jinda_mar.01": {
+    "lemma": "jinda_mar",
+    "uhvn_class": "MARAA-1.0",
+    "mapping": {
+      "Arg0": "Agent",
+      "Arg1": "Patient",
+      "Arg2": "Instrument"
+    }
+  },
+  "hatya_karna.01": {
+    "lemma": "hatya_karna",
+    "uhvn_class": "HATYA-1.1",
+    "mapping": {
+      "Arg0": "Agent",
+      "Arg1": "Patient",
+      "Arg2": "Instrument"
+    }
+  },
+  "katal_karna.01": {
+    "lemma": "katal_karna",
+    "uhvn_class": "HATYA-1.1",
+    "mapping": {
+      "Arg0": "Agent",
+      "Arg1": "Patient",
+      "Arg2": "Instrument"
+    }
+  },
+  "janam_lena.01": {
+    "lemma": "janam_lena",
+    "uhvn_class": "JNM-1.0",
+    "mapping": {
+      "Arg1": "Patient"
+    }
+  },
+  "paida_hona.01": {
+    "lemma": "paida_hona",
+    "uhvn_class": "JNM-1.0",
+    "mapping": {
+      "Arg1": "Patient"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+weights:
+  exact_hi_label: 4.8
+  normalized_hi_label: 4.1
+  exact_hi_alias: 3.9
+  normalized_hi_alias: 3.1
+  redirect_match: 2.6
+  cleaned_form_bonus: 1.1
+  alternate_form_bonus: 0.8
+  head_form_bonus: 1.0
+  lemma_form_bonus: 0.6
+  ner_type_match: 2.5
+  role_type_match: 1.8
+  type_conflict_penalty: -1.5
+  context_overlap: 0.3
+  abstract_overlap: 0.2
+  hindi_bonus: 0.8
+  english_fallback_penalty: -0.35
+  popularity_scale: 0.001
+  no_type_penalty: -0.15
+  non_entity_title_penalty: -4.0
+  transliteration_match_bonus: 1.2
+  transliteration_mismatch_penalty: -3.5
+  acronym_title_penalty: -3.0
+  ambiguous_alias_penalty: -2.2
+  missing_expected_type_penalty: -1.1

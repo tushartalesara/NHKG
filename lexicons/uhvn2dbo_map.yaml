@@ -1,0 +1,42 @@
+# UHVN Frame -> DBpedia Ontology Mapping
+# Used by the Silver/Gold materializer to generate N-Quads.
+
+# Example 1: The "Killing" Class (from your dummy data)
+MARAA-1.0:
+  # 1. The Event Node Type
+  # When we see this frame, create a node of this type:
+  rdf_type: dbo:Death
+  
+  # 2. Role Mappings
+  # Map UHVN Role -> DBpedia Property
+  roles:
+    Agent: 
+      uri: dbo:perpetrator
+      range: dbo:Agent
+    Patient: 
+      uri: dbo:victim
+      range: dbo:Person
+    Instrument: 
+      uri: dbo:weapon
+      range: dbo:Device
+
+# Example 2: Birth Event (Hypothetical, for context)
+JNM-1.0:
+  rdf_type: dbo:Birth
+  roles:
+    Patient: 
+      uri: dbo:birthPlace  # If the text says "Born in Kashi"
+      # Transformation hint: this role usually maps to a functional property
+      functional: true
+    Time:
+      uri: dbo:birthDate
+      functional: true
+      datatype: xsd:date
+
+# Example 3: General Action (Fallback)
+# If we don't have a specific map, we might use generic schema.org properties
+DEFAULT:
+  rdf_type: schema:Event
+  roles:
+    Agent: schema:actor
+    Patient: schema:target

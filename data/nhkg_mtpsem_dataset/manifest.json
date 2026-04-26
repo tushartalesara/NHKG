@@ -1,0 +1,62 @@
+{
+  "created_at_utc": "2026-03-27T05:36:30.475764+00:00",
+  "mtpsem_root": "D:\\Acads\\MTPSem9+10",
+  "pipeline_ready_input": "data\\nhkg_mtpsem_dataset\\nhkg_large_input.txt",
+  "combined_sources": [
+    "iwn_examples_hi",
+    "hindiwn_examples_hi"
+  ],
+  "filters": {
+    "min_chars": 12,
+    "max_chars": 280,
+    "min_devanagari_ratio": 0.45,
+    "include_glosses_in_combined": false
+  },
+  "source_outputs": {
+    "iwn_examples_hi": "data\\nhkg_mtpsem_dataset\\iwn_examples_hi.txt",
+    "iwn_glosses_hi": "data\\nhkg_mtpsem_dataset\\iwn_glosses_hi.txt",
+    "hindiwn_examples_hi": "data\\nhkg_mtpsem_dataset\\hindiwn_examples_hi.txt",
+    "hindiwn_glosses_hi": "data\\nhkg_mtpsem_dataset\\hindiwn_glosses_hi.txt"
+  },
+  "counts": {
+    "iwn_examples_hi": 40212,
+    "iwn_glosses_hi": 35048,
+    "hindiwn_examples_hi": 39467,
+    "hindiwn_glosses_hi": 34335,
+    "combined_pipeline_input": 40405
+  },
+  "source_stats": {
+    "iwn_examples_hi": {
+      "path": "D:\\Acads\\MTPSem9+10\\iwn_parallel_v0.2\\example.csv",
+      "raw_rows": 56008,
+      "accepted_rows": 40212,
+      "duplicate_rows": 125,
+      "rejected_rows": 15671
+    },
+    "iwn_glosses_hi": {
+      "path": "D:\\Acads\\MTPSem9+10\\iwn_parallel_v0.2\\gloss.csv",
+      "raw_rows": 56008,
+      "accepted_rows": 35048,
+      "duplicate_rows": 3263,
+      "rejected_rows": 17697
+    },
+    "hindiwn_examples_hi": {
+      "path": "D:\\Acads\\MTPSem9+10\\HindiWN_1_5\\database\\data_txt::examples",
+      "raw_rows": 39603,
+      "accepted_rows": 39467,
+      "duplicate_rows": 125,
+      "rejected_rows": 11
+    },
+    "hindiwn_glosses_hi": {
+      "path": "D:\\Acads\\MTPSem9+10\\HindiWN_1_5\\database\\data_txt::glosses",
+      "raw_rows": 39619,
+      "accepted_rows": 34335,
+      "duplicate_rows": 3242,
+      "rejected_rows": 2042
+    }
+  },
+  "inspected_but_excluded_for_now": {
+    "Data_Hindi_hiwiki": "Raw Wikipedia XML/BZ2 dump; not included in the first clean corpus because it needs dedicated wiki-markup extraction and sentence cleaning.",
+    "CurrentData_hiwiki": "Raw Wikipedia compressed dump mirror; excluded for the same reason."
+  }
+}

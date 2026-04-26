@@ -1,0 +1,10 @@
+{
+  "schema_version": "nhkg.input-subset.v2",
+  "source_path": "d:\\Acads\\MTP_Sem_10\\NHKG\\data\\nhkg_mtpsem_dataset\\nhkg_large_input.txt",
+  "output_path": "d:\\Acads\\MTP_Sem_10\\NHKG\\data\\nhkg_mtpsem_dataset\\nhkg_input_5000.txt",
+  "source_line_count": 40405,
+  "start_line": 0,
+  "selected_line_count": 5000,
+  "selection_strategy": "first_n_lines_utf8_preserved_order",
+  "created_at": "2026-03-31T10:19:28.126715+00:00"
+}

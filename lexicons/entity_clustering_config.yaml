@@ -1,0 +1,17 @@
+﻿cluster_threshold: 0.72
+pronoun_threshold: 0.62
+pronoun_max_sentence_distance: 2
+low_confidence_pronoun_margin: 0.08
+allow_misc: false
+repeat_nominal_min_mentions: 2
+role_type_hints:
+  agent: PER
+  actor: PER
+  experiencer: PER
+  speaker: PER
+  leader: PER
+  destination: LOC
+  location: LOC
+  source: LOC
+  origin: LOC
+  place: LOC

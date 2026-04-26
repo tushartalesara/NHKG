@@ -1,0 +1,20 @@
+﻿@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix schema: <https://schema.org/> .
+@prefix nif: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix nhkg: <http://ns.nhkg.org/resource/> .
+
+nhkg:EventShape
+    a sh:NodeShape ;
+    sh:targetClass schema:Event ;
+    sh:property [
+        sh:path nhkg:hasTrigger ;
+        sh:minCount 1 ;
+        sh:class nif:Phrase ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:property [
+        sh:path prov:wasGeneratedBy ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+    ] .

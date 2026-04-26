@@ -1,0 +1,36 @@
+agent:
+  - http://dbpedia.org/ontology/Person
+  - http://dbpedia.org/ontology/Agent
+  - http://dbpedia.org/ontology/Organisation
+actor:
+  - http://dbpedia.org/ontology/Person
+  - http://dbpedia.org/ontology/Agent
+  - http://dbpedia.org/ontology/Organisation
+experiencer:
+  - http://dbpedia.org/ontology/Person
+  - http://dbpedia.org/ontology/Agent
+destination:
+  - http://dbpedia.org/ontology/Place
+  - http://dbpedia.org/ontology/Location
+  - http://dbpedia.org/ontology/PopulatedPlace
+location:
+  - http://dbpedia.org/ontology/Place
+  - http://dbpedia.org/ontology/Location
+  - http://dbpedia.org/ontology/PopulatedPlace
+source:
+  - http://dbpedia.org/ontology/Place
+  - http://dbpedia.org/ontology/Location
+  - http://dbpedia.org/ontology/PopulatedPlace
+place:
+  - http://dbpedia.org/ontology/Place
+  - http://dbpedia.org/ontology/Location
+  - http://dbpedia.org/ontology/PopulatedPlace
+origin:
+  - http://dbpedia.org/ontology/Place
+  - http://dbpedia.org/ontology/Location
+  - http://dbpedia.org/ontology/PopulatedPlace
+organization:
+  - http://dbpedia.org/ontology/Organisation
+  - http://dbpedia.org/ontology/Company
+  - http://dbpedia.org/ontology/GovernmentAgency
+

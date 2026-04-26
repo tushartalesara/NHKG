@@ -1,0 +1,203 @@
+{
+  "meta": {
+    "generated_at": "2026-02-10T10:12:51.233068+00:00",
+    "num_roles": 5
+  },
+  "roles": {
+    "Agent": {
+      "name": "Agent",
+      "selrestrs_examples": [
+        [
+          {
+            "logic": "or",
+            "items": [
+              {
+                "polarity": "+",
+                "type": "animate",
+                "raw": {
+                  "Value": "+",
+                  "type": "animate"
+                }
+              },
+              {
+                "polarity": "+",
+                "type": "organization",
+                "raw": {
+                  "Value": "+",
+                  "type": "organization"
+                }
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "logic": "or",
+            "items": [
+              {
+                "polarity": "+",
+                "type": "animate",
+                "raw": {
+                  "Value": "+",
+                  "type": "animate"
+                }
+              },
+              {
+                "polarity": "+",
+                "type": "organization",
+                "raw": {
+                  "Value": "+",
+                  "type": "organization"
+                }
+              }
+            ]
+          }
+        ]
+      ],
+      "seen_in_classes": [
+        "HATYA-1.1",
+        "MARAA-1.0"
+      ]
+    },
+    "Patient": {
+      "name": "Patient",
+      "selrestrs_examples": [
+        [
+          {
+            "logic": "and",
+            "items": [
+              {
+                "polarity": "+",
+                "type": "animate",
+                "raw": {
+                  "Value": "+",
+                  "type": "animate"
+                }
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "logic": "and",
+            "items": [
+              {
+                "polarity": "+",
+                "type": "animate",
+                "raw": {
+                  "Value": "+",
+                  "type": "animate"
+                }
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "logic": "and",
+            "items": [
+              {
+                "polarity": "+",
+                "type": "animate",
+                "raw": {
+                  "Value": "+",
+                  "type": "animate"
+                }
+              }
+            ]
+          }
+        ]
+      ],
+      "seen_in_classes": [
+        "HATYA-1.1",
+        "JNM-1.0",
+        "MARAA-1.0"
+      ]
+    },
+    "Instrument": {
+      "name": "Instrument",
+      "selrestrs_examples": [
+        [
+          {
+            "logic": "and",
+            "items": [
+              {
+                "polarity": "+",
+                "type": "concrete",
+                "raw": {
+                  "Value": "+",
+                  "type": "concrete"
+                }
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "logic": "and",
+            "items": [
+              {
+                "polarity": "+",
+                "type": "concrete",
+                "raw": {
+                  "Value": "+",
+                  "type": "concrete"
+                }
+              }
+            ]
+          }
+        ]
+      ],
+      "seen_in_classes": [
+        "HATYA-1.1",
+        "MARAA-1.0"
+      ]
+    },
+    "Time": {
+      "name": "Time",
+      "selrestrs_examples": [
+        [
+          {
+            "logic": "and",
+            "items": [
+              {
+                "polarity": "+",
+                "type": "time",
+                "raw": {
+                  "Value": "+",
+                  "type": "time"
+                }
+              }
+            ]
+          }
+        ]
+      ],
+      "seen_in_classes": [
+        "JNM-1.0"
+      ]
+    },
+    "Location": {
+      "name": "Location",
+      "selrestrs_examples": [
+        [
+          {
+            "logic": "and",
+            "items": [
+              {
+                "polarity": "+",
+                "type": "location",
+                "raw": {
+                  "Value": "+",
+                  "type": "location"
+                }
+              }
+            ]
+          }
+        ]
+      ],
+      "seen_in_classes": [
+        "JNM-1.0"
+      ]
+    }
+  }
+}

@@ -1,0 +1,36 @@
+﻿@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix nif: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+@prefix nhkg: <http://ns.nhkg.org/resource/> .
+
+nhkg:TimexShape
+    a sh:NodeShape ;
+    sh:targetClass nhkg:Timex ;
+    sh:property [
+        sh:path nif:anchorOf ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:property [
+        sh:path nhkg:timexType ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+    ] .
+
+nhkg:TemporalRelationShape
+    a sh:NodeShape ;
+    sh:targetClass nhkg:TemporalRelation ;
+    sh:property [
+        sh:path nhkg:sourceEvent ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:property [
+        sh:path nhkg:targetEvent ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:property [
+        sh:path nhkg:temporalRelation ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+    ] .

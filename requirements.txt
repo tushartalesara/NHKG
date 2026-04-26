@@ -1,0 +1,15 @@
+beautifulsoup4==4.14.3
+dateparser
+diskcache
+llama_cpp_python==0.3.16
+numpy>=1.26,<2.1
+pyiwn
+stanza
+torch
+transformers
+sentencepiece
+pyyaml==6.0.3
+requests==2.32.5
+pyshacl
+rdflib
+

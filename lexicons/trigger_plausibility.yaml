@@ -1,0 +1,242 @@
+schema_version: nhkg.trigger_plausibility.v1
+
+# Closed-class anchors are blocked only when they stand alone as the trigger head.
+# These are linguistic categories, not corpus-specific blacklist items.
+hard_block_upos:
+  - PRON
+  - DET
+  - PART
+  - ADP
+  - CCONJ
+  - SCONJ
+  - PUNCT
+
+closed_class_lemmas:
+  demonstratives_pronouns:
+    - यह
+    - ये
+    - वह
+    - वे
+    - इस
+    - उस
+    - इन
+    - उन
+    - इसे
+    - उसे
+    - इसको
+    - उसको
+    - इसने
+    - उसने
+    - इसका
+    - उसकी
+    - इसके
+    - उनके
+  particles:
+    - ही
+    - भी
+    - तो
+    - ना
+    - न
+    - मात्र
+    - केवल
+  postpositions:
+    - में
+    - से
+    - को
+    - पर
+    - तक
+    - ने
+    - का
+    - की
+    - के
+    - लिए
+    - साथ
+  conjunctions:
+    - और
+    - तथा
+    - लेकिन
+    - किन्तु
+    - क्योंकि
+    - यदि
+    - जबकि
+    - या
+  discourse_particles:
+    - अरे
+    - अच्छा
+    - तो
+    - बस
+
+auxiliary_lemmas:
+  - है
+  - हैं
+  - था
+  - थे
+  - थी
+  - हो
+  - होगा
+  - होगी
+  - होंगे
+  - रहे
+  - रही
+  - रहा
+  - गया
+  - गयी
+  - गए
+  - जाना
+  - देना
+  - लेना
+  - पड़ना
+
+copula_lemmas:
+  - है
+  - हैं
+  - था
+  - थे
+  - थी
+  - हो
+  - होगा
+  - होगी
+  - होंगे
+
+light_verb_lemmas:
+  - करना
+  - करना
+  - किया
+  - करता
+  - करती
+  - करते
+  - होना
+  - हो
+  - देना
+  - लेना
+  - पड़ना
+  - जाना
+
+positive_trigger_upos:
+  - VERB
+  - ADJ
+  - NOUN
+  - PROPN
+
+verb_suffixes:
+  - ना
+  - ता
+  - ती
+  - ते
+  - या
+  - यी
+  - ए
+  - कर
+  - करा
+  - किया
+
+adjective_suffixes:
+  - हीन
+  - पूर्ण
+  - युक्त
+  - शील
+  - वान
+  - मय
+  - जनक
+  - योग्य
+  - नीय
+  - त्मक
+
+source_bonus:
+  retrieval_score: 0.32
+  lexical_anchor: 0.22
+  contiguous_ngram: 0.18
+  discontinuous_match: 0.08
+  multiword_predicate: 0.12
+  predicate_center: 0.12
+  frame_selection_bonus: 0.08
+  lexical_span_bonus: 0.08
+
+predicate_center_bonus: 0.10
+lexical_predicate_bonus: 0.08
+light_verb_compound_bonus: 0.06
+predicative_adjective_bonus: 0.06
+predicative_nominal_bonus: 0.05
+helper_like_penalty: 0.14
+mismatch_penalty_weight: 0.14
+major_mismatch_threshold: 1.25
+severe_mismatch_penalty: 0.08
+clause_root_bonus: 0.08
+same_center_competition_penalty: 0.10
+same_center_helper_competitor_penalty: 0.08
+same_center_mismatch_competitor_penalty: 0.08
+same_center_major_mismatch_penalty: 0.05
+same_center_same_family_penalty: 0.05
+same_center_lexical_winner_bonus: 0.06
+
+mismatch_penalties:
+  prefix_pattern: 0.16
+  variable_prefix: 0.18
+  helper_only: 0.7
+  auxiliary_anchor: 0.3
+  copula_anchor: 0.24
+  closed_class_anchor: 1.0
+  outside_clause_center: 0.12
+  attributive_modifier_like: 0.2
+  duplicate_cluster_penalty: 0.1
+
+min_trigger_plausibility_score: 0.28
+min_final_candidate_score: 0.40
+soft_candidate_score: 0.3
+
+adjectival_predicate_bonus: 0.06
+adjectival_bonus_clause_types:
+  - single_adjectival_clause
+adjectival_bonus_requires_predicate_center: true
+adjectival_bonus_disallow_trigger_mismatch: true
+adjectival_bonus_disallow_sources:
+  - single_prefix
+  - multiword_prefix
+
+enable_candidate_dedup: true
+frame_family_merge: true
+duplicate_cluster_min_similarity: 0.6
+trigger_span_overlap_threshold: 0.5
+argument_overlap_threshold: 0.5
+
+coordination_markers:
+  - और
+  - तथा
+  - या
+  - लेकिन
+
+subordination_markers:
+  - क्योंकि
+  - यदि
+  - जब
+  - जबकि
+  - ताकि
+
+suppress_frame_families_in_single_predicate_clause: true
+max_events_per_single_copular_clause: 1
+max_events_per_single_adjectival_clause: 1
+max_events_per_single_predicate_clause: 2
+max_final_candidates_per_clause: 2
+allow_multiple_if_relations_present: true
+allow_multiple_if_clause_centers_gt: 1
+compression_enabled_for_clause_types:
+  - single_copular_clause
+  - single_adjectival_clause
+same_center_merge_window: 1
+same_center_copular_window: 2
+
+trigger_reanchoring_enabled: true
+trigger_reanchor_categories:
+  - pronoun
+  - determiner
+  - particle
+  - adp
+  - conjunction
+  - closed_class
+  - auxiliary
+  - copula
+trigger_reanchor_on_mismatch_flags:
+  - trigger_pattern_mismatch
+  - helper_only_anchor
+  - auxiliary_anchor
+  - copular_anchor

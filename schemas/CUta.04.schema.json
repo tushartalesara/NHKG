@@ -1,0 +1,120 @@
+{
+  "type": "object",
+  "properties": {
+    "doc_id": {
+      "type": "string",
+      "description": "Document Identifier"
+    },
+    "sent_id": {
+      "type": "integer",
+      "description": "Sentence Index"
+    },
+    "frame": {
+      "type": "string",
+      "const": "CUta.04"
+    },
+    "trigger": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "span": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "minItems": 2,
+          "maxItems": 2,
+          "description": "Token indices [start, end)"
+        }
+      },
+      "required": [
+        "text",
+        "span"
+      ]
+    },
+    "arguments": {
+      "type": "object",
+      "properties": {
+        "Agent": {
+          "type": "object",
+          "properties": {
+            "text": {
+              "type": "string"
+            },
+            "span": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              },
+              "minItems": 2,
+              "maxItems": 2
+            }
+          },
+          "required": [
+            "text",
+            "span"
+          ],
+          "description": "The entity that performs the action or causes the event (Hindi: Karta / Doer). Usually marked by 'ne'."
+        },
+        "Theme": {
+          "type": "object",
+          "properties": {
+            "text": {
+              "type": "string"
+            },
+            "span": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              },
+              "minItems": 2,
+              "maxItems": 2
+            }
+          },
+          "required": [
+            "text",
+            "span"
+          ],
+          "description": "The entity that is moved or described (Hindi: Vishay)."
+        },
+        "Unknown": {
+          "type": "object",
+          "properties": {
+            "text": {
+              "type": "string"
+            },
+            "span": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              },
+              "minItems": 2,
+              "maxItems": 2
+            }
+          },
+          "required": [
+            "text",
+            "span"
+          ],
+          "description": "Role: Unknown"
+        }
+      },
+      "additionalProperties": false,
+      "required": []
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    }
+  },
+  "required": [
+    "doc_id",
+    "frame",
+    "trigger",
+    "arguments"
+  ],
+  "description": "Extraction frame for 'CUta.04' events (e.g., CUdZa)."
+}

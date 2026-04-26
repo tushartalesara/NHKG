@@ -1,0 +1,120 @@
+{
+  "type": "object",
+  "properties": {
+    "doc_id": {
+      "type": "string",
+      "description": "Document Identifier"
+    },
+    "sent_id": {
+      "type": "integer",
+      "description": "Sentence Index"
+    },
+    "frame": {
+      "type": "string",
+      "const": "JNM-1.0"
+    },
+    "trigger": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "span": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "minItems": 2,
+          "maxItems": 2,
+          "description": "Token indices [start, end)"
+        }
+      },
+      "required": [
+        "text",
+        "span"
+      ]
+    },
+    "arguments": {
+      "type": "object",
+      "properties": {
+        "Patient": {
+          "type": "object",
+          "properties": {
+            "text": {
+              "type": "string"
+            },
+            "span": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              },
+              "minItems": 2,
+              "maxItems": 2
+            }
+          },
+          "required": [
+            "text",
+            "span"
+          ],
+          "description": "The entity that undergoes the action or is affected by it (Hindi: Karma / Victim). Usually marked by 'ko'. (Maps to dbo:birthPlace)"
+        },
+        "Time": {
+          "type": "object",
+          "properties": {
+            "text": {
+              "type": "string"
+            },
+            "span": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              },
+              "minItems": 2,
+              "maxItems": 2
+            }
+          },
+          "required": [
+            "text",
+            "span"
+          ],
+          "description": "The time when the event happens (Hindi: Samay). (Maps to dbo:birthDate)"
+        },
+        "Location": {
+          "type": "object",
+          "properties": {
+            "text": {
+              "type": "string"
+            },
+            "span": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              },
+              "minItems": 2,
+              "maxItems": 2
+            }
+          },
+          "required": [
+            "text",
+            "span"
+          ],
+          "description": "The place where the event happens (Hindi: Sthaan)."
+        }
+      },
+      "additionalProperties": false,
+      "required": []
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    }
+  },
+  "required": [
+    "doc_id",
+    "frame",
+    "trigger",
+    "arguments"
+  ],
+  "description": "Extraction frame for 'JNM-1.0' events (e.g., janam_lena, paida_hona)."
+}

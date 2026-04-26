@@ -1,0 +1,30 @@
+﻿@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix nif: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix nhkg: <http://ns.nhkg.org/resource/> .
+
+nhkg:TokenShape
+    a sh:NodeShape ;
+    sh:targetClass nif:Word ;
+    sh:property [
+        sh:path nif:anchorOf ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:property [
+        sh:path nif:beginIndex ;
+        sh:minCount 1 ;
+        sh:datatype xsd:integer ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:property [
+        sh:path nif:endIndex ;
+        sh:minCount 1 ;
+        sh:datatype xsd:integer ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:property [
+        sh:path nif:referenceContext ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+    ] .
